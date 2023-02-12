@@ -1,4 +1,9 @@
 # AutoSignal
 
-Web service for Automated Trading based on many resources
+Web application for Automated Trading based on many resources
 
+- Alpaca API
+
+- Twitter API
+
+- (NLP)
