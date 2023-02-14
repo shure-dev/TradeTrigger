@@ -13,6 +13,7 @@ pip = "*"
 install = "*"
 pyyaml = "*"
 dash-daq = "*"
+scikit-learn = "*"
 
 [dev-packages]
 

@@ -1,6 +1,6 @@
 # TradeTrigger
 
-![architecture_0214](https://user-images.githubusercontent.com/61527175/218827773-faad64ad-1d09-4546-9548-e0e24a5d47e2.png)
+![Architecture](https://user-images.githubusercontent.com/61527175/218839445-a94843b5-8d65-4519-a2e2-3aa38ae5c053.png)
 
 
 ```

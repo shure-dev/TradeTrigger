@@ -71,8 +71,8 @@ def pychart():
 def overview_component(number, text):
     return html.Div([
         dbc.Row([
-                    html.H1(number, style={'color': 'white', 'margin': 15}),
-                    html.H5(text, style={'color': 'white', 'margin': 15})
+                    html.H5(text, style={'color': 'white', 'margin': 15}),
+                    html.H1("$"+f"{number}", style={'color': 'white', 'margin': 15})
                     ])
     ], style={"border": "2px white transparent", 'margin': 10, 'border-radius': 10, 'background': '#181240'})
 
@@ -80,10 +80,10 @@ def overview_component(number, text):
 overview_layout = html.Div([
 
     row([
-        overview_component(838, "Total Patients"),
-        overview_component(345, "Total Dataset Size"),
-        overview_component(8433, "Total Images"),
-        overview_component(936, "Total Table Size")
+        overview_component(192.48, "Equity"),
+        overview_component(34.53, "Profit/Loss"),
+        overview_component(3.532, "Buying Power"),
+        overview_component(324.33, "Cash")
     ]),
 
     dbc.Row(
