@@ -1,6 +1,9 @@
-# AutoSignal
+# TradeTrigger
 
-Web application for Automated Trading based on many resources
+'''
+Opensource web application for 
+Automated Trading based on many resources
+'''
 
 - Alpaca API
 

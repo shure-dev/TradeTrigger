@@ -3,7 +3,7 @@ from dash import html, dcc
 import plotly.express as px
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
-from util.styles import FIGURE_STYLE,border_style
+from component.style import FIGURE_STYLE,border_style
 import pandas as pd
 from util.components import row
 
