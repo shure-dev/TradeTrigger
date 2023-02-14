@@ -17,3 +17,20 @@ CONTENT_STYLE = {
 NAVLINK_STILE = {
     'color': 'white', 'fontSize': 20
 }
+
+
+BORDER_STYLE = {"border": "2px white transparent",
+                'margin': 20, 'border-radius': 10, 'background': '#181240',
+                'width': '90%','color': 'white'}
+
+FIGURE_STYLE = {
+    'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+    'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+    "legend_font_color": "white",
+    "title_font_color": "white"
+}
+
+def border_style(percent):
+    return {"border": "2px white transparent",
+            'margin': 20, 'border-radius': 10, 'background': '#181240',
+            'width': f'{percent}%'}

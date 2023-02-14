@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 from component.style import FIGURE_STYLE,border_style
 import pandas as pd
-from util.components import row
+from component.layout import row
 
 def ts_plot():
     df = pd.read_csv(
@@ -77,7 +77,7 @@ def overview_component(number, text):
     ], style={"border": "2px white transparent", 'margin': 10, 'border-radius': 10, 'background': '#181240'})
 
 
-home_layout = html.Div([
+overview_layout = html.Div([
 
     row([
         overview_component(838, "Total Patients"),

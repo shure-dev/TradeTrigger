@@ -3,32 +3,14 @@
 
 from dash import Dash, html, dcc, Input, Output
 import dash_bootstrap_components as dbc
-from pages.image_page import tiff_layout
-from pages.analysis_page import analysis_layout
-from pages.table_page import table_layout
-from pages.home_page import home_layout
 
+from pages.overview import overview_layout
+from pages.automate import automate_layout
+from pages.chart import chart_layout
+from pages.setting import setting_layout
+
+from component.style import SIDEBAR_STYLE,CONTENT_STYLE,NAVLINK_STILE
 from __dash import app
-
-SIDEBAR_STYLE = {
-    "position": "fixed",
-    "top": 0,
-    "left": 0,
-    "bottom": 0,
-    "width": "16rem",
-    "padding": "2rem 1rem",
-    "background-color": "#080124",
-}
-
-CONTENT_STYLE = {
-    "margin-left": "18rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
-}
-
-NAVLINK_STILE = {
-    'color': 'white', 'fontSize': 20
-}
 
 sidebar = html.Div(
     [
@@ -41,7 +23,7 @@ sidebar = html.Div(
             [
                 dbc.NavLink("Overview", href="/",
                             active="exact", style=NAVLINK_STILE),
-                dbc.NavLink("Resource", href="/resource",
+                dbc.NavLink("Automate", href="/automate",
                             active="exact", style=NAVLINK_STILE),
                 dbc.NavLink("Chart", href="/chart",
                             active="exact", style=NAVLINK_STILE),
@@ -63,13 +45,13 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content], style={'backgr
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
-        return table_layout
-    elif pathname == "/resource":
-        return home_layout
+        return overview_layout
+    elif pathname == "/automate":
+        return automate_layout
     elif pathname == "/chart":
-        return tiff_layout
+        return chart_layout
     elif pathname == "/setting":
-        return analysis_layout
+        return setting_layout
 
     return html.Div(
         [

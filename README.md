@@ -9,9 +9,6 @@ Automated Trading based on many resources
 ```
 
 
-
-
-
 ## Resources
 
 - Alpaca API
