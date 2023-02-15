@@ -83,21 +83,28 @@ def stock_ticker():
 #         )
 #     ]))
 
-# def time_end():
-#     return html.Div(dbc.Row([
+def order_amount():
+    return html.Div(dbc.Row([
 
-#         html.H6("Time end", style=TEXT_STYLE),
-#         dcc.Input(
-#             id="input_ticker",
-#             type="search",
-#             placeholder="Ticker", 
-#             style=INPUT_STYLE
-#         )
-#     ]))
+        html.H6("Time end", style=TEXT_STYLE),
+        dcc.Input(
+            id="input_ticker",
+            type="search",
+            placeholder="Ticker", 
+            style=INPUT_STYLE
+        )
+    ]))
 
 
 
 automate_layout = html.Div(children=[
+
+
+    row_background([
+        twitter_user_select(),
+        twitter_keyword(),
+        stock_ticker(),
+    ]),
 
     html.Div(ts_plot(), style=border_style(100)),
 
@@ -105,7 +112,7 @@ automate_layout = html.Div(children=[
         twitter_user_select(),
         twitter_keyword(),
         stock_ticker(),
-
     ]),
+
 
 ])
